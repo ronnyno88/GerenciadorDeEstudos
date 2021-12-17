@@ -1,19 +1,21 @@
 import 'package:flutter/material.dart';
 
 class ProgressIcons extends StatelessWidget {
-  const ProgressIcons({Key? key, required this.total, required this.completo}) : super(key: key);
   final int total;
-  final int completo;
+  final int done;
+
+  const ProgressIcons({required this.total, required this.done});
+
   @override
   Widget build(BuildContext context) {
     final iconSize = 50.0;
-    final iconCompleto = Icon(
+    final doneIcon = Icon(
       Icons.beenhere,
       color: Colors.amber,
       size: iconSize,
     );
 
-    final iconIncompleto = Icon(
+    final notDoneIcon = Icon(
       Icons.beenhere,
       color: Colors.deepOrange,
       size: iconSize,
@@ -22,10 +24,10 @@ class ProgressIcons extends StatelessWidget {
     List<Icon> icons = [];
 
     for (int i = 0; i < total; i++) {
-      if (i < completo) {
-        icons.add(iconCompleto);
+      if (i < done) {
+        icons.add(doneIcon);
       } else {
-        icons.add(iconIncompleto);
+        icons.add(notDoneIcon);
       }
     }
     return Padding(

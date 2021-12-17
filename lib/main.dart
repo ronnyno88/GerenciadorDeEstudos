@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
-
-import 'telas/tela_home.dart';
+import 'package:pomodoro/telas/home-screen.dart';
 
 void main() {
   runApp(const MyApp());
@@ -17,7 +16,8 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
         primarySwatch: Colors.yellow,
-        visualDensity: VisualDensity.adaptivePlatformDensity,      ),
+        visualDensity: VisualDensity.adaptivePlatformDensity,
+      ),
       home: Home(),
     );
   }

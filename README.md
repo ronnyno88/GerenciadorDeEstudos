@@ -1,4 +1,4 @@
-# pomodoro
+# temporizador
 
 A new Flutter project.
 
